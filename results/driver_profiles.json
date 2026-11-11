@@ -1,0 +1,534 @@
+[
+  {
+    "database": "neo4j",
+    "query": "MATCH (i:BenchIssuer {cik:$cik})-[:CONTAINS]->(e:BenchEntity)\n -[:HAS_ASSERTION]->(a:BenchAssertion)-[:SUPPORTED_BY]->(s:BenchSource)\n WHERE a.context IN $contexts RETURN a.payload AS payload ORDER BY a.id LIMIT 65",
+    "rows": 14,
+    "operators": [
+      {
+        "operator": "ProduceResults@neo4j",
+        "db_hits": 0,
+        "rows": 14,
+        "args": {
+          "Order": "a.id ASC",
+          "GlobalMemory": 3216,
+          "planner-impl": "IDP",
+          "Memory": 0,
+          "string-representation": "Cypher 5\n\nPlanner COST\n\nRuntime SLOTTED\n\nRuntime version 5.26\n\n+----------------------+----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| Operator             | Id | Details                                       | Estimated Rows | Rows | DB Hits | Memory (Bytes) | Page Cache Hits/Misses | Ordered by |\n+----------------------+----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +ProduceResults      |  0 | payload                                       |              0 |   14 |       0 |              0 |                    0/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+            |\n| +Projection          |  1 | a.payload AS payload                          |              0 |   14 |      14 |                |                    8/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+            |\n| +Top                 |  2 | `a.id` ASC LIMIT 65                           |              0 |   14 |       0 |           3136 |                    0/0 | a.id ASC   |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Projection          |  3 | a.id AS `a.id`                                |              0 |   14 |      14 |                |                    0/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  4 | s:BenchSource                                 |              0 |   14 |      14 |                |                    0/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  5 | (a)-[anon_2:SUPPORTED_BY]->(s)                |              0 |   14 |      42 |                |                    0/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  6 | (a:BenchAssertion AND a.context IN $contexts) |              0 |   14 |      28 |              0 |                    1/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  7 | (e)-[anon_1:HAS_ASSERTION]->(a)               |              0 |   14 |      16 |                |                    0/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  8 | e:BenchEntity                                 |              0 |    1 |       1 |                |                    0/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  9 | (i)-[anon_0:CONTAINS]->(e)                    |              0 |    1 |       2 |                |                    2/0 |            |\n| |                    +----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +NodeUniqueIndexSeek | 10 | UNIQUE i:BenchIssuer(cik) WHERE cik = $cik    |              0 |    1 |       2 |                |                    1/0 |            |\n+----------------------+----+-----------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n\nTotal database accesses: 133, total allocated memory: 3216\n",
+          "runtime": "SLOTTED",
+          "runtime-impl": "SLOTTED",
+          "version": "5",
+          "DbHits": 0,
+          "Details": "payload",
+          "planner-version": "5.26",
+          "runtime-version": "5.26",
+          "Id": 0,
+          "EstimatedRows": 0.0,
+          "planner": "COST",
+          "PageCacheMisses": 0,
+          "Rows": 14,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Projection@neo4j",
+        "db_hits": 14,
+        "rows": 14,
+        "args": {
+          "Order": "a.id ASC",
+          "Details": "a.payload AS payload",
+          "Id": 1,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 14,
+          "Rows": 14,
+          "PageCacheHits": 8
+        }
+      },
+      {
+        "operator": "Top@neo4j",
+        "db_hits": 0,
+        "rows": 14,
+        "args": {
+          "Order": "a.id ASC",
+          "Details": "`a.id` ASC LIMIT 65",
+          "Memory": 3136,
+          "Id": 2,
+          "EstimatedRows": 0.0,
+          "PageCacheMisses": 0,
+          "DbHits": 0,
+          "Rows": 14,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Projection@neo4j",
+        "db_hits": 14,
+        "rows": 14,
+        "args": {
+          "Details": "a.id AS `a.id`",
+          "Id": 3,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 14,
+          "Rows": 14,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@neo4j",
+        "db_hits": 14,
+        "rows": 14,
+        "args": {
+          "Details": "s:BenchSource",
+          "Id": 4,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 14,
+          "Rows": 14,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Expand(All)@neo4j",
+        "db_hits": 42,
+        "rows": 14,
+        "args": {
+          "Details": "(a)-[anon_2:SUPPORTED_BY]->(s)",
+          "Id": 5,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 42,
+          "Rows": 14,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@neo4j",
+        "db_hits": 28,
+        "rows": 14,
+        "args": {
+          "Details": "(a:BenchAssertion AND a.context IN $contexts)",
+          "Memory": 0,
+          "Id": 6,
+          "EstimatedRows": 0.0,
+          "PageCacheMisses": 0,
+          "DbHits": 28,
+          "Rows": 14,
+          "PageCacheHits": 1
+        }
+      },
+      {
+        "operator": "Expand(All)@neo4j",
+        "db_hits": 16,
+        "rows": 14,
+        "args": {
+          "Details": "(e)-[anon_1:HAS_ASSERTION]->(a)",
+          "Id": 7,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 16,
+          "Rows": 14,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@neo4j",
+        "db_hits": 1,
+        "rows": 1,
+        "args": {
+          "Details": "e:BenchEntity",
+          "Id": 8,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 1,
+          "Rows": 1,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Expand(All)@neo4j",
+        "db_hits": 2,
+        "rows": 1,
+        "args": {
+          "Details": "(i)-[anon_0:CONTAINS]->(e)",
+          "Id": 9,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 2,
+          "Rows": 1,
+          "PageCacheHits": 2
+        }
+      },
+      {
+        "operator": "NodeUniqueIndexSeek@neo4j",
+        "db_hits": 2,
+        "rows": 1,
+        "args": {
+          "Details": "UNIQUE i:BenchIssuer(cik) WHERE cik = $cik",
+          "Id": 10,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 2,
+          "Rows": 1,
+          "PageCacheHits": 1
+        }
+      }
+    ],
+    "result_available_after_ms": 170,
+    "result_consumed_after_ms": 11
+  },
+  {
+    "database": "ctxa",
+    "query": "MATCH (i:BenchIssuer {cik:$cik})-[:CONTAINS]->(e:BenchEntity)\n -[:HAS_ASSERTION]->(a:BenchAssertion)-[:SUPPORTED_BY]->(s:BenchSource)\n WHERE a.context IN $contexts RETURN a.payload AS payload ORDER BY a.id LIMIT 65",
+    "rows": 7,
+    "operators": [
+      {
+        "operator": "ProduceResults@ctxa",
+        "db_hits": 0,
+        "rows": 7,
+        "args": {
+          "Order": "a.id ASC",
+          "GlobalMemory": 1800,
+          "planner-impl": "IDP",
+          "Memory": 0,
+          "string-representation": "Cypher 5\n\nPlanner COST\n\nRuntime SLOTTED\n\nRuntime version 5.26\n\n+----------------------+----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| Operator             | Id | Details                                         | Estimated Rows | Rows | DB Hits | Memory (Bytes) | Page Cache Hits/Misses | Ordered by |\n+----------------------+----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +ProduceResults      |  0 | payload                                         |              0 |    7 |       0 |              0 |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+            |\n| +Projection          |  1 | a.payload AS payload                            |              0 |    7 |       7 |                |                    3/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+            |\n| +Top                 |  2 | `a.id` ASC LIMIT 65                             |              0 |    7 |       0 |           1736 |                    0/0 | a.id ASC   |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Projection          |  3 | a.id AS `a.id`                                  |              0 |    7 |       7 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  4 | s:BenchSource                                   |              0 |    7 |       7 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  5 | (a)-[anon_2:SUPPORTED_BY]->(s)                  |              0 |    7 |      21 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  6 | (a:BenchAssertion AND a.context = $contexts[0]) |              0 |    7 |      14 |                |                    1/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  7 | (e)-[anon_1:HAS_ASSERTION]->(a)                 |              0 |    7 |       9 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  8 | e:BenchEntity                                   |              0 |    1 |       1 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  9 | (i)-[anon_0:CONTAINS]->(e)                      |              0 |    1 |       2 |                |                    2/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +NodeUniqueIndexSeek | 10 | UNIQUE i:BenchIssuer(cik) WHERE cik = $cik      |              0 |    1 |       2 |                |                    1/0 |            |\n+----------------------+----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n\nTotal database accesses: 70, total allocated memory: 1800\n",
+          "runtime": "SLOTTED",
+          "runtime-impl": "SLOTTED",
+          "version": "5",
+          "DbHits": 0,
+          "Details": "payload",
+          "planner-version": "5.26",
+          "runtime-version": "5.26",
+          "Id": 0,
+          "EstimatedRows": 0.0,
+          "planner": "COST",
+          "PageCacheMisses": 0,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Projection@ctxa",
+        "db_hits": 7,
+        "rows": 7,
+        "args": {
+          "Order": "a.id ASC",
+          "Details": "a.payload AS payload",
+          "Id": 1,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 7,
+          "Rows": 7,
+          "PageCacheHits": 3
+        }
+      },
+      {
+        "operator": "Top@ctxa",
+        "db_hits": 0,
+        "rows": 7,
+        "args": {
+          "Order": "a.id ASC",
+          "Details": "`a.id` ASC LIMIT 65",
+          "Memory": 1736,
+          "Id": 2,
+          "EstimatedRows": 0.0,
+          "PageCacheMisses": 0,
+          "DbHits": 0,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Projection@ctxa",
+        "db_hits": 7,
+        "rows": 7,
+        "args": {
+          "Details": "a.id AS `a.id`",
+          "Id": 3,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 7,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@ctxa",
+        "db_hits": 7,
+        "rows": 7,
+        "args": {
+          "Details": "s:BenchSource",
+          "Id": 4,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 7,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Expand(All)@ctxa",
+        "db_hits": 21,
+        "rows": 7,
+        "args": {
+          "Details": "(a)-[anon_2:SUPPORTED_BY]->(s)",
+          "Id": 5,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 21,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@ctxa",
+        "db_hits": 14,
+        "rows": 7,
+        "args": {
+          "Details": "(a:BenchAssertion AND a.context = $contexts[0])",
+          "Id": 6,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 14,
+          "Rows": 7,
+          "PageCacheHits": 1
+        }
+      },
+      {
+        "operator": "Expand(All)@ctxa",
+        "db_hits": 9,
+        "rows": 7,
+        "args": {
+          "Details": "(e)-[anon_1:HAS_ASSERTION]->(a)",
+          "Id": 7,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 9,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@ctxa",
+        "db_hits": 1,
+        "rows": 1,
+        "args": {
+          "Details": "e:BenchEntity",
+          "Id": 8,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 1,
+          "Rows": 1,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Expand(All)@ctxa",
+        "db_hits": 2,
+        "rows": 1,
+        "args": {
+          "Details": "(i)-[anon_0:CONTAINS]->(e)",
+          "Id": 9,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 2,
+          "Rows": 1,
+          "PageCacheHits": 2
+        }
+      },
+      {
+        "operator": "NodeUniqueIndexSeek@ctxa",
+        "db_hits": 2,
+        "rows": 1,
+        "args": {
+          "Details": "UNIQUE i:BenchIssuer(cik) WHERE cik = $cik",
+          "Id": 10,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 2,
+          "Rows": 1,
+          "PageCacheHits": 1
+        }
+      }
+    ],
+    "result_available_after_ms": 156,
+    "result_consumed_after_ms": 4
+  },
+  {
+    "database": "ctxb",
+    "query": "MATCH (i:BenchIssuer {cik:$cik})-[:CONTAINS]->(e:BenchEntity)\n -[:HAS_ASSERTION]->(a:BenchAssertion)-[:SUPPORTED_BY]->(s:BenchSource)\n WHERE a.context IN $contexts RETURN a.payload AS payload ORDER BY a.id LIMIT 65",
+    "rows": 7,
+    "operators": [
+      {
+        "operator": "ProduceResults@ctxb",
+        "db_hits": 0,
+        "rows": 7,
+        "args": {
+          "Order": "a.id ASC",
+          "GlobalMemory": 1800,
+          "planner-impl": "IDP",
+          "Memory": 0,
+          "string-representation": "Cypher 5\n\nPlanner COST\n\nRuntime SLOTTED\n\nRuntime version 5.26\n\n+----------------------+----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| Operator             | Id | Details                                         | Estimated Rows | Rows | DB Hits | Memory (Bytes) | Page Cache Hits/Misses | Ordered by |\n+----------------------+----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +ProduceResults      |  0 | payload                                         |              0 |    7 |       0 |              0 |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+            |\n| +Projection          |  1 | a.payload AS payload                            |              0 |    7 |       7 |                |                    3/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+            |\n| +Top                 |  2 | `a.id` ASC LIMIT 65                             |              0 |    7 |       0 |           1736 |                    0/0 | a.id ASC   |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Projection          |  3 | a.id AS `a.id`                                  |              0 |    7 |       7 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  4 | s:BenchSource                                   |              0 |    7 |       7 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  5 | (a)-[anon_2:SUPPORTED_BY]->(s)                  |              0 |    7 |      21 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  6 | (a:BenchAssertion AND a.context = $contexts[0]) |              0 |    7 |      14 |                |                    1/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  7 | (e)-[anon_1:HAS_ASSERTION]->(a)                 |              0 |    7 |       9 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Filter              |  8 | e:BenchEntity                                   |              0 |    1 |       1 |                |                    0/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +Expand(All)         |  9 | (i)-[anon_0:CONTAINS]->(e)                      |              0 |    1 |       2 |                |                    2/0 |            |\n| |                    +----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n| +NodeUniqueIndexSeek | 10 | UNIQUE i:BenchIssuer(cik) WHERE cik = $cik      |              0 |    1 |       2 |                |                    1/0 |            |\n+----------------------+----+-------------------------------------------------+----------------+------+---------+----------------+------------------------+------------+\n\nTotal database accesses: 70, total allocated memory: 1800\n",
+          "runtime": "SLOTTED",
+          "runtime-impl": "SLOTTED",
+          "version": "5",
+          "DbHits": 0,
+          "Details": "payload",
+          "planner-version": "5.26",
+          "runtime-version": "5.26",
+          "Id": 0,
+          "EstimatedRows": 0.0,
+          "planner": "COST",
+          "PageCacheMisses": 0,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Projection@ctxb",
+        "db_hits": 7,
+        "rows": 7,
+        "args": {
+          "Order": "a.id ASC",
+          "Details": "a.payload AS payload",
+          "Id": 1,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 7,
+          "Rows": 7,
+          "PageCacheHits": 3
+        }
+      },
+      {
+        "operator": "Top@ctxb",
+        "db_hits": 0,
+        "rows": 7,
+        "args": {
+          "Order": "a.id ASC",
+          "Details": "`a.id` ASC LIMIT 65",
+          "Memory": 1736,
+          "Id": 2,
+          "EstimatedRows": 0.0,
+          "PageCacheMisses": 0,
+          "DbHits": 0,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Projection@ctxb",
+        "db_hits": 7,
+        "rows": 7,
+        "args": {
+          "Details": "a.id AS `a.id`",
+          "Id": 3,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 7,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@ctxb",
+        "db_hits": 7,
+        "rows": 7,
+        "args": {
+          "Details": "s:BenchSource",
+          "Id": 4,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 7,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Expand(All)@ctxb",
+        "db_hits": 21,
+        "rows": 7,
+        "args": {
+          "Details": "(a)-[anon_2:SUPPORTED_BY]->(s)",
+          "Id": 5,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 21,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@ctxb",
+        "db_hits": 14,
+        "rows": 7,
+        "args": {
+          "Details": "(a:BenchAssertion AND a.context = $contexts[0])",
+          "Id": 6,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 14,
+          "Rows": 7,
+          "PageCacheHits": 1
+        }
+      },
+      {
+        "operator": "Expand(All)@ctxb",
+        "db_hits": 9,
+        "rows": 7,
+        "args": {
+          "Details": "(e)-[anon_1:HAS_ASSERTION]->(a)",
+          "Id": 7,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 9,
+          "Rows": 7,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Filter@ctxb",
+        "db_hits": 1,
+        "rows": 1,
+        "args": {
+          "Details": "e:BenchEntity",
+          "Id": 8,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 1,
+          "Rows": 1,
+          "PageCacheHits": 0
+        }
+      },
+      {
+        "operator": "Expand(All)@ctxb",
+        "db_hits": 2,
+        "rows": 1,
+        "args": {
+          "Details": "(i)-[anon_0:CONTAINS]->(e)",
+          "Id": 9,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 2,
+          "Rows": 1,
+          "PageCacheHits": 2
+        }
+      },
+      {
+        "operator": "NodeUniqueIndexSeek@ctxb",
+        "db_hits": 2,
+        "rows": 1,
+        "args": {
+          "Details": "UNIQUE i:BenchIssuer(cik) WHERE cik = $cik",
+          "Id": 10,
+          "PageCacheMisses": 0,
+          "EstimatedRows": 0.0,
+          "DbHits": 2,
+          "Rows": 1,
+          "PageCacheHits": 1
+        }
+      }
+    ],
+    "result_available_after_ms": 103,
+    "result_consumed_after_ms": 2
+  }
+]

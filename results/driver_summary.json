@@ -1,0 +1,181 @@
+{
+  "logical_requests": 576,
+  "payload_parity_all": true,
+  "rows_per_request": 14,
+  "python": "3.10.12",
+  "python_driver": "6.1.0",
+  "rust_driver": "neo4rs0.8.0",
+  "cells": [
+    {
+      "driver": "python",
+      "mode": "single",
+      "concurrency": 1,
+      "requests": 48,
+      "p50_ms": 1.4365074999999998,
+      "p95_ms": 4.230362699999999,
+      "throughput_requests_s": 456.4649979263651,
+      "per_block_p50_ms": [
+        3.4869624999999997,
+        1.3837165,
+        1.2796945000000002
+      ]
+    },
+    {
+      "driver": "python",
+      "mode": "single",
+      "concurrency": 4,
+      "requests": 48,
+      "p50_ms": 3.9323645000000003,
+      "p95_ms": 8.399288199999999,
+      "throughput_requests_s": 804.7547728622405,
+      "per_block_p50_ms": [
+        4.359217,
+        3.9323835000000003,
+        3.5569775
+      ]
+    },
+    {
+      "driver": "python",
+      "mode": "sequential",
+      "concurrency": 1,
+      "requests": 48,
+      "p50_ms": 3.126855,
+      "p95_ms": 5.2580672,
+      "throughput_requests_s": 257.97120267464544,
+      "per_block_p50_ms": [
+        5.1098645000000005,
+        3.126855,
+        2.3354999999999997
+      ]
+    },
+    {
+      "driver": "python",
+      "mode": "sequential",
+      "concurrency": 4,
+      "requests": 48,
+      "p50_ms": 8.239678999999999,
+      "p95_ms": 66.00173965,
+      "throughput_requests_s": 240.27643082537165,
+      "per_block_p50_ms": [
+        22.959387,
+        6.801534500000001,
+        6.5235795
+      ]
+    },
+    {
+      "driver": "python",
+      "mode": "parallel",
+      "concurrency": 1,
+      "requests": 48,
+      "p50_ms": 2.074007,
+      "p95_ms": 2.55736515,
+      "throughput_requests_s": 443.90734532836944,
+      "per_block_p50_ms": [
+        2.359724,
+        1.8263829999999999,
+        1.7184595
+      ]
+    },
+    {
+      "driver": "python",
+      "mode": "parallel",
+      "concurrency": 4,
+      "requests": 48,
+      "p50_ms": 7.667834,
+      "p95_ms": 14.613112699999999,
+      "throughput_requests_s": 448.545730638944,
+      "per_block_p50_ms": [
+        8.1358995,
+        7.4216560000000005,
+        6.9028605
+      ]
+    },
+    {
+      "driver": "neo4rs",
+      "mode": "single",
+      "concurrency": 1,
+      "requests": 48,
+      "p50_ms": 1.038267,
+      "p95_ms": 2.30543665,
+      "throughput_requests_s": 707.6137693678864,
+      "per_block_p50_ms": [
+        2.1242945,
+        1.038267,
+        0.8368835
+      ]
+    },
+    {
+      "driver": "neo4rs",
+      "mode": "single",
+      "concurrency": 4,
+      "requests": 48,
+      "p50_ms": 2.309113,
+      "p95_ms": 10.1032771,
+      "throughput_requests_s": 1322.6573939565633,
+      "per_block_p50_ms": [
+        2.543101,
+        1.727284,
+        1.4100519999999999
+      ]
+    },
+    {
+      "driver": "neo4rs",
+      "mode": "sequential",
+      "concurrency": 1,
+      "requests": 48,
+      "p50_ms": 2.094338,
+      "p95_ms": 7.979169199999999,
+      "throughput_requests_s": 229.90455531544794,
+      "per_block_p50_ms": [
+        6.4519195,
+        2.0491535,
+        1.5586705
+      ]
+    },
+    {
+      "driver": "neo4rs",
+      "mode": "sequential",
+      "concurrency": 4,
+      "requests": 48,
+      "p50_ms": 3.2159649999999997,
+      "p95_ms": 6.802459599999998,
+      "throughput_requests_s": 958.5760544426465,
+      "per_block_p50_ms": [
+        5.868169,
+        2.7314879999999997,
+        2.5731515
+      ]
+    },
+    {
+      "driver": "neo4rs",
+      "mode": "parallel",
+      "concurrency": 1,
+      "requests": 48,
+      "p50_ms": 1.3032854999999999,
+      "p95_ms": 1.94903995,
+      "throughput_requests_s": 700.0291722573596,
+      "per_block_p50_ms": [
+        1.745029,
+        1.3032854999999999,
+        1.0487745
+      ]
+    },
+    {
+      "driver": "neo4rs",
+      "mode": "parallel",
+      "concurrency": 4,
+      "requests": 48,
+      "p50_ms": 3.432735,
+      "p95_ms": 16.8318809,
+      "throughput_requests_s": 922.2809768577222,
+      "per_block_p50_ms": [
+        3.6041119999999998,
+        2.2825275,
+        1.6264745
+      ]
+    }
+  ],
+  "errors": 0,
+  "profile_metadata_rust": null,
+  "gil_overhead": null
+}

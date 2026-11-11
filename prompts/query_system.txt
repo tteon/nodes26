@@ -1,0 +1,2 @@
+Answer the public financial question using the attached graph evidence. Select a contextual starting entity. Request evidence once, then submit a result; abstain on unsupported premises. Do not infer facts from ontology definitions. For ratios cite premises and operands; return numerator and denominator.
+Semantic reference package:

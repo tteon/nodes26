@@ -1,0 +1,34 @@
+[
+  {
+    "cik": "DEMO0001",
+    "key": "exampleco",
+    "id": "L1",
+    "context": "Legal",
+    "source_id": "source-L1",
+    "payload": "{\"attribute\":\"pending product claims\",\"basis\":\"reported\",\"build_id\":\"synthetic-v1\",\"context\":\"Legal\",\"entity_key\":\"exampleco\",\"id\":\"L1\",\"modality\":\"reported\",\"model\":\"synthetic_authored_fixture_not_LLM\",\"ontology_version\":\"demo-v1\",\"period\":\"2023-12-31\",\"scope\":\"ExampleCo\",\"source_end\":57,\"source_id\":\"source-L1\",\"source_start\":0,\"source_text\":\"As of 2023-12-31 ExampleCo had 17 pending product claims.\",\"subject\":\"ExampleCo\",\"unit\":\"claims\",\"value\":\"17\"}"
+  },
+  {
+    "cik": "DEMO0001",
+    "key": "exampleco",
+    "id": "A1",
+    "context": "Accounting",
+    "source_id": "source-A1",
+    "payload": "{\"attribute\":\"revenue recognition\",\"basis\":\"reported\",\"build_id\":\"synthetic-v1\",\"context\":\"Accounting\",\"entity_key\":\"exampleco\",\"id\":\"A1\",\"modality\":\"reported\",\"model\":\"synthetic_authored_fixture_not_LLM\",\"ontology_version\":\"demo-v1\",\"period\":\"ongoing\",\"scope\":\"consolidated\",\"source_end\":66,\"source_id\":\"source-A1\",\"source_start\":0,\"source_text\":\"ExampleCo recognizes the sale after the customer accepts delivery.\",\"subject\":\"ExampleCo\",\"unit\":\"policy\",\"value\":\"upon customer acceptance\"}"
+  },
+  {
+    "cik": "DEMO0001",
+    "key": "exampleco",
+    "id": "A2",
+    "context": "Accounting",
+    "source_id": "source-A2",
+    "payload": "{\"attribute\":\"revenue\",\"basis\":\"reported\",\"build_id\":\"synthetic-v1\",\"context\":\"Accounting\",\"entity_key\":\"exampleco\",\"id\":\"A2\",\"modality\":\"reported\",\"model\":\"synthetic_authored_fixture_not_LLM\",\"ontology_version\":\"demo-v1\",\"period\":\"2023\",\"scope\":\"segment Alpha\",\"source_end\":68,\"source_id\":\"source-A2\",\"source_start\":0,\"source_text\":\"In 2023 ExampleCo segment Alpha reported revenue of USD 120 million.\",\"subject\":\"ExampleCo\",\"unit\":\"USD million\",\"value\":\"120\"}"
+  },
+  {
+    "cik": "DEMO0001",
+    "key": "exampleco",
+    "id": "A3",
+    "context": "Accounting",
+    "source_id": "source-A3",
+    "payload": "{\"attribute\":\"revenue\",\"basis\":\"reported\",\"build_id\":\"synthetic-v1\",\"context\":\"Accounting\",\"entity_key\":\"exampleco\",\"id\":\"A3\",\"modality\":\"reported\",\"model\":\"synthetic_authored_fixture_not_LLM\",\"ontology_version\":\"demo-v1\",\"period\":\"2023\",\"scope\":\"segment Beta\",\"source_end\":66,\"source_id\":\"source-A3\",\"source_start\":0,\"source_text\":\"In 2023 ExampleCo segment Beta reported revenue of USD 80 million.\",\"subject\":\"ExampleCo\",\"unit\":\"USD million\",\"value\":\"80\"}"
+  }
+]

@@ -1,0 +1,618 @@
+{
+  "purpose": "Public code supplement, not redistribution of the complete evaluation corpus",
+  "source_workspace_commit": "ce3d2e89befb7eae7db1fa9c9d708b86d61a7334",
+  "python_function_source": "scripts/compare_federation_drivers.py",
+  "python_function_source_sha256": "3bc91fb0437028bf946aa8d6812270da0500257f46901a3e4c30702e91d0653e",
+  "python_function_export_sha256": "4c053d868a01a2d062dec69e327871e05d20c1ff12b4ab425f4d525f447d8ec7",
+  "copied_sources": {
+    "rust/Cargo.toml": {
+      "source": "driver_compare/Cargo.toml",
+      "source_sha256": "fdda4bf35abc32c498f1d7adedb8be7b0cc4b90650acad3806622e28a0bb56d6",
+      "export_sha256": "fdda4bf35abc32c498f1d7adedb8be7b0cc4b90650acad3806622e28a0bb56d6",
+      "modified": false
+    },
+    "rust/Cargo.lock": {
+      "source": "driver_compare/Cargo.lock",
+      "source_sha256": "04a2c324df06fe63f1b0603d31238824760a9de7d6d9887f8987ce4e757dfcfc",
+      "export_sha256": "04a2c324df06fe63f1b0603d31238824760a9de7d6d9887f8987ce4e757dfcfc",
+      "modified": false
+    },
+    "rust/src/main.rs": {
+      "source": "driver_compare/src/main.rs",
+      "source_sha256": "44136083d6a596ee0bcbf5b8e19eabab386d971fa178d1e445f48d698d705358",
+      "export_sha256": "44136083d6a596ee0bcbf5b8e19eabab386d971fa178d1e445f48d698d705358",
+      "modified": false
+    },
+    "research_source/ontology_federation/scripts/expand_ontology_questions.py": {
+      "source": "ontology_federation/scripts/expand_ontology_questions.py",
+      "source_sha256": "d8675029eb6e0de5d15d65c6bae9d5759302789216fa149537eef1e98121d8d2",
+      "export_sha256": "d8675029eb6e0de5d15d65c6bae9d5759302789216fa149537eef1e98121d8d2",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/scripts/grade_finder_answers.py": {
+      "source": "ontology_federation/scripts/grade_finder_answers.py",
+      "source_sha256": "ce774a5232ac2baceb0579fd2a438dc79cd44c38da6121f5d5be37798ede03ba",
+      "export_sha256": "ab8d2c7a73bdd8194205af802cda98607e0fc5220dd278c688276f6b60f33a77",
+      "modified": true,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/scripts/report_finder_grades.py": {
+      "source": "ontology_federation/scripts/report_finder_grades.py",
+      "source_sha256": "e05a9467b4cdf605eea22a29e1b2a76b845ce07b37fa03b6bbb8873a2bbf0c7a",
+      "export_sha256": "e05a9467b4cdf605eea22a29e1b2a76b845ce07b37fa03b6bbb8873a2bbf0c7a",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/scripts/compare_federation_drivers.py": {
+      "source": "ontology_federation/scripts/compare_federation_drivers.py",
+      "source_sha256": "3bc91fb0437028bf946aa8d6812270da0500257f46901a3e4c30702e91d0653e",
+      "export_sha256": "3bc91fb0437028bf946aa8d6812270da0500257f46901a3e4c30702e91d0653e",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ontology_workloads_replay.py": {
+      "source": "ontology_federation/src/ogkf/ontology_workloads_replay.py",
+      "source_sha256": "6937297d0f5fd4bab7d4df6ee8f8c63c95983a4bdf2a60e47503c4e41c42d451",
+      "export_sha256": "6937297d0f5fd4bab7d4df6ee8f8c63c95983a4bdf2a60e47503c4e41c42d451",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/storage.py": {
+      "source": "ontology_federation/src/ogkf/storage.py",
+      "source_sha256": "2421703d48d31ea6cc3a13135e1409bbaa545e7c1fb5d37327dce93a9fd46582",
+      "export_sha256": "2421703d48d31ea6cc3a13135e1409bbaa545e7c1fb5d37327dce93a9fd46582",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_pointers.py": {
+      "source": "ontology_federation/src/ogkf/context_pointers.py",
+      "source_sha256": "495d4baab2a5f012f5894cda3a54b5750648083d05625337e4f2c44124abbeb5",
+      "export_sha256": "495d4baab2a5f012f5894cda3a54b5750648083d05625337e4f2c44124abbeb5",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/cli.py": {
+      "source": "ontology_federation/src/ogkf/cli.py",
+      "source_sha256": "bbe17bdabd1d6046e710a7156cc1c9c48c8174376a2bfa01c2cfceca963ebc26",
+      "export_sha256": "bbe17bdabd1d6046e710a7156cc1c9c48c8174376a2bfa01c2cfceca963ebc26",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/models.py": {
+      "source": "ontology_federation/src/ogkf/models.py",
+      "source_sha256": "338be09facdfef7dd4d94b89e6832a9dd37764581c4440281093b31a1ea8c273",
+      "export_sha256": "338be09facdfef7dd4d94b89e6832a9dd37764581c4440281093b31a1ea8c273",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/fixtures.py": {
+      "source": "ontology_federation/src/ogkf/fixtures.py",
+      "source_sha256": "74458c94e1623cc6870c6378db13fd9da7ec7d9a9384fb5a8cc3caca327bbd24",
+      "export_sha256": "74458c94e1623cc6870c6378db13fd9da7ec7d9a9384fb5a8cc3caca327bbd24",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/extraction.py": {
+      "source": "ontology_federation/src/ogkf/extraction.py",
+      "source_sha256": "f980672ab88db74a3865ab749d9e525b41a3e28747c8dbdec48fa260440a0af9",
+      "export_sha256": "f980672ab88db74a3865ab749d9e525b41a3e28747c8dbdec48fa260440a0af9",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/evaluation.py": {
+      "source": "ontology_federation/src/ogkf/evaluation.py",
+      "source_sha256": "3b91b2c10f8cb523b59a3b4ca7f86feb4f46e91a8c4a135c278e0bd68de32e24",
+      "export_sha256": "3b91b2c10f8cb523b59a3b4ca7f86feb4f46e91a8c4a135c278e0bd68de32e24",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/observability.py": {
+      "source": "ontology_federation/src/ogkf/observability.py",
+      "source_sha256": "b550088609571a1f24f2ccad392042fdd7e56e38ee2e9f75842980c8235d4a49",
+      "export_sha256": "b550088609571a1f24f2ccad392042fdd7e56e38ee2e9f75842980c8235d4a49",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/preflight.py": {
+      "source": "ontology_federation/src/ogkf/preflight.py",
+      "source_sha256": "04d5ea79710ce3017f53cac0ad9f280eadc7e20662529cb952fef5d88281b397",
+      "export_sha256": "04d5ea79710ce3017f53cac0ad9f280eadc7e20662529cb952fef5d88281b397",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/identity.py": {
+      "source": "ontology_federation/src/ogkf/identity.py",
+      "source_sha256": "94ac3f8ac2c28d36e99ce440612383986f0e1e0c4de472b867cd13b9a6e86e02",
+      "export_sha256": "94ac3f8ac2c28d36e99ce440612383986f0e1e0c4de472b867cd13b9a6e86e02",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ontology_workloads_observe.py": {
+      "source": "ontology_federation/src/ogkf/ontology_workloads_observe.py",
+      "source_sha256": "cd42a33e28d2db865353cdc17129b2c049ecdc724232d6a647c83c98fbfc8d78",
+      "export_sha256": "cd42a33e28d2db865353cdc17129b2c049ecdc724232d6a647c83c98fbfc8d78",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/presentation_handoff.py": {
+      "source": "ontology_federation/src/ogkf/presentation_handoff.py",
+      "source_sha256": "74a9e3e753550872719b10a39cd8d8f32248ab00013d1a2fb3eecd58e219a6e0",
+      "export_sha256": "74a9e3e753550872719b10a39cd8d8f32248ab00013d1a2fb3eecd58e219a6e0",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/study.py": {
+      "source": "ontology_federation/src/ogkf/study.py",
+      "source_sha256": "1209779feadd9f0f188df7932c5e2a91452b2fbe25aeedb60ce6d2b131fce7ed",
+      "export_sha256": "1209779feadd9f0f188df7932c5e2a91452b2fbe25aeedb60ce6d2b131fce7ed",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/probes.py": {
+      "source": "ontology_federation/src/ogkf/probes.py",
+      "source_sha256": "0778e509007381cd0c4893976de180142fe62debf166eff6e468f22ea3ef5a8d",
+      "export_sha256": "0778e509007381cd0c4893976de180142fe62debf166eff6e468f22ea3ef5a8d",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ontology_workloads_audit.py": {
+      "source": "ontology_federation/src/ogkf/ontology_workloads_audit.py",
+      "source_sha256": "c319d3fb15fc04a020e6bd5ff4eef30fb2f3c9faf47f98ce62241cdf928a2b1c",
+      "export_sha256": "c319d3fb15fc04a020e6bd5ff4eef30fb2f3c9faf47f98ce62241cdf928a2b1c",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/__init__.py": {
+      "source": "ontology_federation/src/ogkf/__init__.py",
+      "source_sha256": "f9f3fcefa433091177bf01359d99d7bbe7c115fac9a105852ac096f699582465",
+      "export_sha256": "f9f3fcefa433091177bf01359d99d7bbe7c115fac9a105852ac096f699582465",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/registry.py": {
+      "source": "ontology_federation/src/ogkf/registry.py",
+      "source_sha256": "d248cc5056c0e66eb89a0bc143fd79a2a6411f7e6df34abbdc0168e31da6e338",
+      "export_sha256": "d248cc5056c0e66eb89a0bc143fd79a2a6411f7e6df34abbdc0168e31da6e338",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/metrics.py": {
+      "source": "ontology_federation/src/ogkf/metrics.py",
+      "source_sha256": "ccfae4c743f9def111f503abfdaf077d53e77133598b76368d6abf10a20c5305",
+      "export_sha256": "ccfae4c743f9def111f503abfdaf077d53e77133598b76368d6abf10a20c5305",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/gateway.py": {
+      "source": "ontology_federation/src/ogkf/gateway.py",
+      "source_sha256": "681286425e014fdd5b9c4a2929cb3b0b539e4c6118187210c986be5e24506db6",
+      "export_sha256": "681286425e014fdd5b9c4a2929cb3b0b539e4c6118187210c986be5e24506db6",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/agent.py": {
+      "source": "ontology_federation/src/ogkf/agent.py",
+      "source_sha256": "711ca2a313ee9697719d7eacb42f18c54afbf5b5b6411551b8679531b3d77383",
+      "export_sha256": "711ca2a313ee9697719d7eacb42f18c54afbf5b5b6411551b8679531b3d77383",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/domain_query.py": {
+      "source": "ontology_federation/src/ogkf/domain_query.py",
+      "source_sha256": "330404ba7327b619f3f70e137df65e6154a5bc92aa432a0d38a317dc6e2e102b",
+      "export_sha256": "330404ba7327b619f3f70e137df65e6154a5bc92aa432a0d38a317dc6e2e102b",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_experiment.py": {
+      "source": "ontology_federation/src/ogkf/context_experiment.py",
+      "source_sha256": "fe9906ffc292c5af100038f81c6e60212ba345620705638b5aaa50f276fe4a46",
+      "export_sha256": "fe9906ffc292c5af100038f81c6e60212ba345620705638b5aaa50f276fe4a46",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/routing.py": {
+      "source": "ontology_federation/src/ogkf/routing.py",
+      "source_sha256": "da6b6fae8422ac3348eeebe67e5405bbae08471fbe7745133058c1cae7ae3ef8",
+      "export_sha256": "da6b6fae8422ac3348eeebe67e5405bbae08471fbe7745133058c1cae7ae3ef8",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/analysis.py": {
+      "source": "ontology_federation/src/ogkf/analysis.py",
+      "source_sha256": "55f98329221df9959d21c00b3f4f880080ddef4f159b05d1b9a0dd1ccc1f0660",
+      "export_sha256": "55f98329221df9959d21c00b3f4f880080ddef4f159b05d1b9a0dd1ccc1f0660",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ontology_workloads.py": {
+      "source": "ontology_federation/src/ogkf/ontology_workloads.py",
+      "source_sha256": "3657db318f78fab05dc2946453be77512d8ff784224708ccf67b4df947a56745",
+      "export_sha256": "91cfbc0494f422d1e4c17bb084b59cb209eaaff52c76aec289e866138af2245d",
+      "modified": true,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/environment.py": {
+      "source": "ontology_federation/src/ogkf/environment.py",
+      "source_sha256": "8385febec86efb6ad084a81485aa610cfd60ca182442a179117b8abb57291244",
+      "export_sha256": "8385febec86efb6ad084a81485aa610cfd60ca182442a179117b8abb57291244",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/local_runtime.py": {
+      "source": "ontology_federation/src/ogkf/local_runtime.py",
+      "source_sha256": "f94b7b92798ada7ccc8814127e1b57898b031112815cb6e5773def203a935142",
+      "export_sha256": "f94b7b92798ada7ccc8814127e1b57898b031112815cb6e5773def203a935142",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/rq1_metrics.py": {
+      "source": "ontology_federation/src/ogkf/rq1_metrics.py",
+      "source_sha256": "2376fb85b7169b9aee0aef3de2babba6a373472a306ec148d05152e474098298",
+      "export_sha256": "2376fb85b7169b9aee0aef3de2babba6a373472a306ec148d05152e474098298",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/recover.py": {
+      "source": "ontology_federation/src/ogkf/ds01/recover.py",
+      "source_sha256": "e57ef01a7070892d8a1a7f0f4949205b65e82369e48cf2b9b4c30454e6fd4f4d",
+      "export_sha256": "e57ef01a7070892d8a1a7f0f4949205b65e82369e48cf2b9b4c30454e6fd4f4d",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/contracts.py": {
+      "source": "ontology_federation/src/ogkf/ds01/contracts.py",
+      "source_sha256": "359b06df5164137140d91c9d246c1a9b0c59013b26731824ee4fa6841e52e08a",
+      "export_sha256": "359b06df5164137140d91c9d246c1a9b0c59013b26731824ee4fa6841e52e08a",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/storage.py": {
+      "source": "ontology_federation/src/ogkf/ds01/storage.py",
+      "source_sha256": "d3f0e83f17393d84eb3d6d2e76156433d323d7018cca1c21f4da36c0df504105",
+      "export_sha256": "d3f0e83f17393d84eb3d6d2e76156433d323d7018cca1c21f4da36c0df504105",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/semantic.py": {
+      "source": "ontology_federation/src/ogkf/ds01/semantic.py",
+      "source_sha256": "77308c46c09299a0e4ec225eed1f2950e0b449aa3e4e87b59e7dbc222cac51ec",
+      "export_sha256": "77308c46c09299a0e4ec225eed1f2950e0b449aa3e4e87b59e7dbc222cac51ec",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/evaluation.py": {
+      "source": "ontology_federation/src/ogkf/ds01/evaluation.py",
+      "source_sha256": "c22ded1d6baccafc66fccc40ea5dc733dfcf7cc40c9c7a29041dc3b6492fcf83",
+      "export_sha256": "c22ded1d6baccafc66fccc40ea5dc733dfcf7cc40c9c7a29041dc3b6492fcf83",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/runner.py": {
+      "source": "ontology_federation/src/ogkf/ds01/runner.py",
+      "source_sha256": "2ad1758e55d39f74d6b904d8a4e8fe3e760553550a59a0aff2276c27d0961bde",
+      "export_sha256": "2ad1758e55d39f74d6b904d8a4e8fe3e760553550a59a0aff2276c27d0961bde",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/__init__.py": {
+      "source": "ontology_federation/src/ogkf/ds01/__init__.py",
+      "source_sha256": "63ccc4a33758461caa5ff3b92c44c8565cd671dcfa9aa664628df7cb62150c02",
+      "export_sha256": "63ccc4a33758461caa5ff3b92c44c8565cd671dcfa9aa664628df7cb62150c02",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/retrieval.py": {
+      "source": "ontology_federation/src/ogkf/ds01/retrieval.py",
+      "source_sha256": "d007f7debe8228297595e19e9a0b2a34df574b86bfe5e8f8a148441322a15e39",
+      "export_sha256": "d007f7debe8228297595e19e9a0b2a34df574b86bfe5e8f8a148441322a15e39",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/trace.py": {
+      "source": "ontology_federation/src/ogkf/ds01/trace.py",
+      "source_sha256": "d95b05cf2e70354ecf5adaeb6d6aec4aa16d292c97b2e118f50bc0709af86a6c",
+      "export_sha256": "d95b05cf2e70354ecf5adaeb6d6aec4aa16d292c97b2e118f50bc0709af86a6c",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/__main__.py": {
+      "source": "ontology_federation/src/ogkf/ds01/__main__.py",
+      "source_sha256": "982976b5921afbc741885fea6bf3377366cd60bec745f35f456b973dc67f08cd",
+      "export_sha256": "982976b5921afbc741885fea6bf3377366cd60bec745f35f456b973dc67f08cd",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/finder.py": {
+      "source": "ontology_federation/src/ogkf/ds01/finder.py",
+      "source_sha256": "d0202095df178182a655b55fda1286d4244f58169962789748c9e2ea0709d1c1",
+      "export_sha256": "d0202095df178182a655b55fda1286d4244f58169962789748c9e2ea0709d1c1",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/review.py": {
+      "source": "ontology_federation/src/ogkf/ds01/review.py",
+      "source_sha256": "ff271de84b229a038bb10db654a2c3c34019f0fe58b4e637a5ea6309f0b2595e",
+      "export_sha256": "ff271de84b229a038bb10db654a2c3c34019f0fe58b4e637a5ea6309f0b2595e",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/ds01/corpus.py": {
+      "source": "ontology_federation/src/ogkf/ds01/corpus.py",
+      "source_sha256": "d733d55dd239a3077f8ccc7dcc24565ed2f9ab432795884b751108d6392a6133",
+      "export_sha256": "d733d55dd239a3077f8ccc7dcc24565ed2f9ab432795884b751108d6392a6133",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/contracts.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/contracts.py",
+      "source_sha256": "6a9bf66b4dea70aba00645b8c90f4f333cc353a664bfffefcca423e777c0d6a8",
+      "export_sha256": "6a9bf66b4dea70aba00645b8c90f4f333cc353a664bfffefcca423e777c0d6a8",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/storage.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/storage.py",
+      "source_sha256": "b845378d3fa82bc3c9b54acf303cd3dea8590982a5d6c11590cd25a57a20d685",
+      "export_sha256": "b845378d3fa82bc3c9b54acf303cd3dea8590982a5d6c11590cd25a57a20d685",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/graph_smoke.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/graph_smoke.py",
+      "source_sha256": "98eab3b36c17bda3b0dbf2b14b8c7fb930531ce28e267e0259225e7524f2bc2d",
+      "export_sha256": "98eab3b36c17bda3b0dbf2b14b8c7fb930531ce28e267e0259225e7524f2bc2d",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/matrices.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/matrices.py",
+      "source_sha256": "de4e07af046a6a7c78fd978ce87317fdcddb7462778e6ae4c05ac98f1a84ca44",
+      "export_sha256": "de4e07af046a6a7c78fd978ce87317fdcddb7462778e6ae4c05ac98f1a84ca44",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/fixtures.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/fixtures.py",
+      "source_sha256": "c4703438a77370e4feb7fd2c70258dbb999ba1f7641b56445437be1a42b10bd6",
+      "export_sha256": "c4703438a77370e4feb7fd2c70258dbb999ba1f7641b56445437be1a42b10bd6",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/evaluation.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/evaluation.py",
+      "source_sha256": "aaedf014be49cd70fa979ce6bc6a908017799761feaaebb2fb50794890683375",
+      "export_sha256": "aaedf014be49cd70fa979ce6bc6a908017799761feaaebb2fb50794890683375",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/capabilities.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/capabilities.py",
+      "source_sha256": "8f4fda76f31bb254d5187442df3d0b97a2db0d89598e57bb08c16a38b9ba1523",
+      "export_sha256": "8f4fda76f31bb254d5187442df3d0b97a2db0d89598e57bb08c16a38b9ba1523",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/profile_study.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/profile_study.py",
+      "source_sha256": "34dc32c5cfddad101a626f898dfc2da2058a10eb2e6a7a1e2449ced60fbde44f",
+      "export_sha256": "34dc32c5cfddad101a626f898dfc2da2058a10eb2e6a7a1e2449ced60fbde44f",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/__init__.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/__init__.py",
+      "source_sha256": "95e6fa71691385a7e0b0202bb7d4bdeb846406892f0610a4fd065c36a85822e8",
+      "export_sha256": "95e6fa71691385a7e0b0202bb7d4bdeb846406892f0610a4fd065c36a85822e8",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/profiles.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/profiles.py",
+      "source_sha256": "5381cf4e743866dc5bc05b53e61385bd5257d0d9f2adcea49f85ef68df0d397d",
+      "export_sha256": "5381cf4e743866dc5bc05b53e61385bd5257d0d9f2adcea49f85ef68df0d397d",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/pipeline.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/pipeline.py",
+      "source_sha256": "df0523753074df996710cce3db45e786f457552bdc05b5e0d905a71fac65340a",
+      "export_sha256": "df0523753074df996710cce3db45e786f457552bdc05b5e0d905a71fac65340a",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/enterprise/annotation.py": {
+      "source": "ontology_federation/src/ogkf/enterprise/annotation.py",
+      "source_sha256": "c97a68848e5797bdfe67f248e67d362ced47e57273fc4c68e071035956247604",
+      "export_sha256": "c97a68848e5797bdfe67f248e67d362ced47e57273fc4c68e071035956247604",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/candidates.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/candidates.py",
+      "source_sha256": "799fa37d76faeecde1dcb3965917d29524a3f160f6c8d26334e1055739007fb8",
+      "export_sha256": "799fa37d76faeecde1dcb3965917d29524a3f160f6c8d26334e1055739007fb8",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/scenario_pipeline.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/scenario_pipeline.py",
+      "source_sha256": "601a063f29900c7f9445174ebea696c818331d71f3264acb6eb9e2700cecc069",
+      "export_sha256": "601a063f29900c7f9445174ebea696c818331d71f3264acb6eb9e2700cecc069",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/semantic_review.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/semantic_review.py",
+      "source_sha256": "d4dd8e14dfd94ac085771a37a42ac19ab6358a7c8955d48be4ad77d8c3b44d21",
+      "export_sha256": "d4dd8e14dfd94ac085771a37a42ac19ab6358a7c8955d48be4ad77d8c3b44d21",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/scenario_report.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/scenario_report.py",
+      "source_sha256": "e7803a8cf7c6e092dc42e5a2b319c266291f295c01b40408334f73b5104b7318",
+      "export_sha256": "e7803a8cf7c6e092dc42e5a2b319c266291f295c01b40408334f73b5104b7318",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/scenario_annotation.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/scenario_annotation.py",
+      "source_sha256": "e6bf42f65a9c0f92b6a6f4ca5767590701e34cbd6cb4761caa4e8b575246a1f9",
+      "export_sha256": "e6bf42f65a9c0f92b6a6f4ca5767590701e34cbd6cb4761caa4e8b575246a1f9",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/models.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/models.py",
+      "source_sha256": "5f0f983b077375d76a37089d1ce9daaadb3bce9658c5a8ff4e1019df0c3204bf",
+      "export_sha256": "5f0f983b077375d76a37089d1ce9daaadb3bce9658c5a8ff4e1019df0c3204bf",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/challenge.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/challenge.py",
+      "source_sha256": "84488ba86123b5de281af2ed0d25fa6c145d48ee0ff2afb62462b404b90b23e4",
+      "export_sha256": "84488ba86123b5de281af2ed0d25fa6c145d48ee0ff2afb62462b404b90b23e4",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/challenge_llm.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/challenge_llm.py",
+      "source_sha256": "8308118871ed3d8048c1ec1956c5973914dba7d49e805a24c4952a5f2e343db2",
+      "export_sha256": "8308118871ed3d8048c1ec1956c5973914dba7d49e805a24c4952a5f2e343db2",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/scenario_finalize.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/scenario_finalize.py",
+      "source_sha256": "20f2ddedf57409b7eab9cc56fd340ff16b5fcccfda23cd65cf1203b332a59374",
+      "export_sha256": "20f2ddedf57409b7eab9cc56fd340ff16b5fcccfda23cd65cf1203b332a59374",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/graph_dataset.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/graph_dataset.py",
+      "source_sha256": "afbb5d8b211359f24009a01b7f5954195a95798dc47b93df6392b683b49da505",
+      "export_sha256": "afbb5d8b211359f24009a01b7f5954195a95798dc47b93df6392b683b49da505",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/lifecycle.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/lifecycle.py",
+      "source_sha256": "09962b0a29fa5770215f246fffe1717b8c7acf628f202abba8f738568e0f5aef",
+      "export_sha256": "09962b0a29fa5770215f246fffe1717b8c7acf628f202abba8f738568e0f5aef",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/review_receipts.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/review_receipts.py",
+      "source_sha256": "804a4fc8ec3bc3cc4ffa65b71c4a435fe94633e8cb8f5974893752733fa4e9f8",
+      "export_sha256": "804a4fc8ec3bc3cc4ffa65b71c4a435fe94633e8cb8f5974893752733fa4e9f8",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/__init__.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/__init__.py",
+      "source_sha256": "e7e5ae7c131dbcb1ca58f695847707a6b854571e1b2f37ed96a046e002da03ae",
+      "export_sha256": "e7e5ae7c131dbcb1ca58f695847707a6b854571e1b2f37ed96a046e002da03ae",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/scenario_store.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/scenario_store.py",
+      "source_sha256": "c0e4c14d56bf785cf78bfa716f823c643450cca49d64476bfb0f7b8439dbd3e5",
+      "export_sha256": "c0e4c14d56bf785cf78bfa716f823c643450cca49d64476bfb0f7b8439dbd3e5",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/challenge_graph.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/challenge_graph.py",
+      "source_sha256": "9ba520126e7b9549d82d6a18c3e8220a5010a9e64dfe1c70793c3c5517a7fb70",
+      "export_sha256": "9ba520126e7b9549d82d6a18c3e8220a5010a9e64dfe1c70793c3c5517a7fb70",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/artifacts.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/artifacts.py",
+      "source_sha256": "ddbd528ae7ad4cfb7743d375419a4dbfa9835231b6a0fd4d4dfc5c5b777c54d9",
+      "export_sha256": "ddbd528ae7ad4cfb7743d375419a4dbfa9835231b6a0fd4d4dfc5c5b777c54d9",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/__main__.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/__main__.py",
+      "source_sha256": "7894956223ac34ab5fd35f7cf0efc0220faf15ad15801473c42450b5f08391ec",
+      "export_sha256": "7894956223ac34ab5fd35f7cf0efc0220faf15ad15801473c42450b5f08391ec",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/compiler.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/compiler.py",
+      "source_sha256": "efbb3a5c06d952b07fee6eeaa251afa48503840ffb3429c6f02d1c7562e91600",
+      "export_sha256": "efbb3a5c06d952b07fee6eeaa251afa48503840ffb3429c6f02d1c7562e91600",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/connected.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/connected.py",
+      "source_sha256": "0224bb4912367f5fce0f19465f9d2eb6e810cd314f02021a7eac038f04c014b7",
+      "export_sha256": "0224bb4912367f5fce0f19465f9d2eb6e810cd314f02021a7eac038f04c014b7",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/src/ogkf/context_frame/review_annotation.py": {
+      "source": "ontology_federation/src/ogkf/context_frame/review_annotation.py",
+      "source_sha256": "87468bbd9cd50f4ceebd7bda950172df221f8f69fefe1faf54dab51fee22d0c7",
+      "export_sha256": "87468bbd9cd50f4ceebd7bda950172df221f8f69fefe1faf54dab51fee22d0c7",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/finder_multi_instance/mara.py": {
+      "source": "finder_multi_instance/mara.py",
+      "source_sha256": "0917124c168e61675ce0a6dcce16009efa2e75fa1f630fbc4b6715967d6a2f05",
+      "export_sha256": "0917124c168e61675ce0a6dcce16009efa2e75fa1f630fbc4b6715967d6a2f05",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/finder_multi_instance/telemetry.py": {
+      "source": "finder_multi_instance/telemetry.py",
+      "source_sha256": "6bdfab9ce1823d13dd5b02de822f2a9434d1b68d064199aec6da09f966953fb5",
+      "export_sha256": "6bdfab9ce1823d13dd5b02de822f2a9434d1b68d064199aec6da09f966953fb5",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/finder_multi_instance/acceptance.py": {
+      "source": "finder_multi_instance/acceptance.py",
+      "source_sha256": "313e12fada89dc4d4e64218d41708043c5b8e2a99b3ae357076a5a3b12812713",
+      "export_sha256": "313e12fada89dc4d4e64218d41708043c5b8e2a99b3ae357076a5a3b12812713",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/finder_multi_instance/storage_guard.py": {
+      "source": "finder_multi_instance/storage_guard.py",
+      "source_sha256": "db5eb19f2cb565e18f3bd5826c9e85213d6943834ac594cdbc4765433b29ffda",
+      "export_sha256": "db5eb19f2cb565e18f3bd5826c9e85213d6943834ac594cdbc4765433b29ffda",
+      "modified": false,
+      "change": "local path prefixes replaced with placeholders; source code only"
+    },
+    "research_source/ontology_federation/scripts/build_question_evidence_companion.py": {
+      "source": "ontology_federation/scripts/build_question_evidence_companion.py",
+      "source_sha256": "d1093621e4af117202739887b05253b823970bc3e2d3f507d2f3931df4a48d10",
+      "export_sha256": "364fe625ea2522afe42a48b0a2454471d847630b11d7fe811d33c540205879bd",
+      "modified": true,
+      "change": "local path prefix replaced with placeholder; no native data exported"
+    }
+  },
+  "data_exclusions": [
+    "FinDER native questions and answers",
+    "reference passages",
+    "FIBO definition files",
+    "actual model requests/responses",
+    "credentials and environment files",
+    "human-review queues"
+  ],
+  "source_archive_note": "research_source preserves relevant harness source with local path placeholders; external datasets,semantic packages and campaign receipts are not included. It is not a turnkey reproduction of the paid campaign.",
+  "license_basis": "Original workspace Cargo.toml declares workspace.package.license=MIT; third-party datasets and definitions retain their own terms."
+}

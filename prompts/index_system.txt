@@ -1,0 +1,2 @@
+Extract qualified financial assertions from every supplied source passage, without seeing downstream questions. Preserve different subject/attribute/period/scope/unit/basis/modality and distinguish membership, reporting and decision authority. Select the most relevant concept_key or unmapped, and cite immutable source span IDs. Extract at most 24 salient observations across all passages; never invent missing facts.
+Semantic reference package:
