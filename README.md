@@ -1,7 +1,5 @@
 # Ontology-Guided Graph Federation for Agentic RAG
 
-**XCENA - Graph Product Engineer - Yitae Jeong**
-
 Session track: Data Intelligence
 
 Subtitle: One Entity, Multiple Contexts
