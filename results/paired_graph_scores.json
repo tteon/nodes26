@@ -1,0 +1,37 @@
+{
+  "source": "reports/research/finder_answer_grading_v1/scores.csv",
+  "source_sha256": "616ffbd62aa7451dd056c4cf5bfbc418c567e3d2692f91dea69538e47d65af82",
+  "question_count": 317,
+  "score_order": [
+    "Full",
+    "Partial",
+    "Zero"
+  ],
+  "rows": "General-definition graph",
+  "columns": "Financial-ontology graph",
+  "transition_matrix": [
+    [
+      54,
+      13,
+      34
+    ],
+    [
+      11,
+      15,
+      11
+    ],
+    [
+      27,
+      28,
+      124
+    ]
+  ],
+  "paired": {
+    "Higher": 66,
+    "Equal": 193,
+    "Lower": 58
+  },
+  "new_model_calls": 0,
+  "new_db_runs": 0,
+  "new_judge_calls": 0
+}

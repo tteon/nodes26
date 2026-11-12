@@ -1,0 +1,101 @@
+{
+  "source": "reports/research/full_review_and_pipeline_v1/summary.json",
+  "source_passages": 12,
+  "models": [
+    "gpt-oss-120b",
+    "DeepSeek-V3.1"
+  ],
+  "rows": [
+    {
+      "model": "DeepSeek-V3.1",
+      "scenario": "generic",
+      "conditions": 12,
+      "received_nonfailed_conditions": 8,
+      "request_failed_conditions": 4,
+      "exact_span_proposals": 41,
+      "rejected_quote_proposals": 12,
+      "empty_or_all_rejected_conditions": 1,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "DeepSeek-V3.1",
+      "scenario": "A",
+      "conditions": 12,
+      "received_nonfailed_conditions": 4,
+      "request_failed_conditions": 8,
+      "exact_span_proposals": 24,
+      "rejected_quote_proposals": 4,
+      "empty_or_all_rejected_conditions": 0,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "DeepSeek-V3.1",
+      "scenario": "B",
+      "conditions": 12,
+      "received_nonfailed_conditions": 6,
+      "request_failed_conditions": 6,
+      "exact_span_proposals": 35,
+      "rejected_quote_proposals": 1,
+      "empty_or_all_rejected_conditions": 0,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "DeepSeek-V3.1",
+      "scenario": "C",
+      "conditions": 12,
+      "received_nonfailed_conditions": 7,
+      "request_failed_conditions": 5,
+      "exact_span_proposals": 41,
+      "rejected_quote_proposals": 2,
+      "empty_or_all_rejected_conditions": 0,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "gpt-oss-120b",
+      "scenario": "generic",
+      "conditions": 12,
+      "received_nonfailed_conditions": 12,
+      "request_failed_conditions": 0,
+      "exact_span_proposals": 35,
+      "rejected_quote_proposals": 43,
+      "empty_or_all_rejected_conditions": 4,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "gpt-oss-120b",
+      "scenario": "A",
+      "conditions": 12,
+      "received_nonfailed_conditions": 11,
+      "request_failed_conditions": 1,
+      "exact_span_proposals": 30,
+      "rejected_quote_proposals": 34,
+      "empty_or_all_rejected_conditions": 2,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "gpt-oss-120b",
+      "scenario": "B",
+      "conditions": 12,
+      "received_nonfailed_conditions": 12,
+      "request_failed_conditions": 0,
+      "exact_span_proposals": 32,
+      "rejected_quote_proposals": 29,
+      "empty_or_all_rejected_conditions": 4,
+      "grounded_fact_f1": null
+    },
+    {
+      "model": "gpt-oss-120b",
+      "scenario": "C",
+      "conditions": 12,
+      "received_nonfailed_conditions": 11,
+      "request_failed_conditions": 1,
+      "exact_span_proposals": 29,
+      "rejected_quote_proposals": 30,
+      "empty_or_all_rejected_conditions": 4,
+      "grounded_fact_f1": null
+    }
+  ],
+  "accuracy_ranking_established": false,
+  "subsequent_answer_campaign": "317 native questions; fixed GPT-OSS-120B",
+  "new_model_calls": 0
+}

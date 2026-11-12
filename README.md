@@ -1,6 +1,14 @@
-# One Entity, Multiple Contexts
+# Ontology-Guided Graph Federation for Agentic RAG
 
-Code and evidence supplement for **Engineering Context-Preserving GraphRAG**.
+**XCENA - Graph Product Engineer - Yitae Jeong**
+
+Session track: Data Intelligence
+
+Subtitle: One Entity, Multiple Contexts
+
+**[Results, graph sizes, charts and closing slides](docs/RESULTS.md)**
+
+Code and aggregate evidence supplement for the session.
 
 GraphRAG begins with the graph we construct: text → entity/relationship extraction → explicit ontology guidance → qualified assertions → evidence retrieval → agent answer → runtime evaluation.
 
@@ -42,7 +50,7 @@ The adapter maps environment names internally, retaining the original research R
 
 ## Read the research
 
-- [Talk outline](docs/TALK_OUTLINE.md): graph construction first, 14 slides, 25 + 5 minutes.
+- [Talk outline](docs/TALK_OUTLINE.md): graph construction first, 16 main slides, 25 + 5 minutes.
 - [Methodology and limits](docs/METHODOLOGY.md): separate historical diversity, two-model pilot, fixed-model 317 questions and DB-only execution.
 - [Storage/query guide](docs/STORAGE.md): qualified single DB, database partitions and a separately labeled native Composite example.
 - [Aggregate quality](results/quality_summary.json), [driver measurements](results/driver_summary.json), [actual PROFILE diagnostics](results/driver_profiles.json).

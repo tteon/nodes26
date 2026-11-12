@@ -1,20 +1,22 @@
-# GraphRAG begins with graph construction
+# Current talk outline
 
-14-slide outline,25minutes plus5minutes Q&A. These are notes, not a generated PPTX.
+16 main slides / 25 minutes plus 5 minutes Q&A; current appendices follow. Conclusion recaps are 14–15 and Thanks/GitHub is 16.
 
-1. **GraphRAG begins before retrieval** (45 seconds)
-2. **Text becomes a proposed graph** (105 seconds)
-3. **Our financial workload and its questions** (105 seconds)
-4. **Ontology makes intended meaning explicit** (90 seconds)
-5. **Our ontology design philosophy** (120 seconds)
-6. **What we changed and what we held fixed** (120 seconds)
-7. **More extracted records do not guarantee preserved meaning** (105 seconds)
-8. **Entity identity and assertion identity** (105 seconds)
-9. **Storage choices inside a Neo4j architecture** (105 seconds)
-10. **One consumer request, multiple graph reads** (120 seconds)
-11. **What did the agent do with the evidence?** (150 seconds)
-12. **Query plans and overlapping reads** (105 seconds)
-13. **The client runtime changes the latency distribution** (135 seconds)
-14. **Preserve the conditions under which a claim is useful** (90 seconds)
+1. **Ontology-Guided Graph Federation for Agentic RAG**
+2. **Raw text does not arrive as a graph**
+3. **One institution, several business perspectives**
+4. **Same names, different surrounding context**
+5. **Connectivity is not business importance**
+6. **Same FinDER questions; different model inputs**
+7. **Same source, different model and prompt**
+8. **From a source-backed statement to model input**
+9. **Choose storage boundaries deliberately**
+10. **One question needs two source views**
+11. **What changed across 317 FinDER questions?**
+12. **Parallel reads overlap independent waiting**
+13. **A lower median can come with a higher tail**
+14. **Recap: preserve meaning and provenance**
+15. **Recap: engineer evidence delivery**
+16. **Thank you — code and aggregate results on GitHub**
 
-Sequence: source text → LLM entity/relationship extraction → ontology alignment → controlled formation → preservation of views → multiple-database retrieval → agent evidence assessment → client runtime → lessons.
+Public closing slides and aggregate results are linked from [RESULTS.md](RESULTS.md). Source-containing native presentation pages are not redistributed in this supplement.

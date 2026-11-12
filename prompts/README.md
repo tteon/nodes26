@@ -7,3 +7,6 @@ Extraction output:subject, attribute, value, period, scope, unit, basis, modalit
 Query output: value, abstain, issuer_cik, evidence_ids, numerator, denominator, subject_used, relation_used, explanation. Generation did not receive native gold. The 317 campaign's actual query anchor remained harness-owned.
 
 G=generic definitions;GX=generic+local rules;FX=selected FIBO definitions/identifiers+the same rules. The nine concepts concern time, leadership/roles/responsibility and monetary quantity facets. This is prompt guidance, not a reasoner or proof of model alignment. Full historical definition packages must be reconstructed from licensed sources and the frozen version metadata before claiming prompt reproduction.
+
+
+The two `judge_*_system.txt` files retain our exact executed correctness and evidence-support system instructions. They contain no native question, answer, source payload or third-party ontology definitions. See [grading method](../docs/GRADING_METHOD.md).
